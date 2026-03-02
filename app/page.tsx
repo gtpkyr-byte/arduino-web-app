@@ -2928,18 +2928,14 @@ function ResultsScreen({ onClose }: { onClose: () => void }) {
           {/* Badges */}
           {progress.badges.length > 0 && (
             <div className="pt-3">
-          <p className="text-sm font-bold text-zinc-300 uppercase tracking-wider mb-2">Insignias ganadas</p>
-          {progress.badges.length === 0 ? (
-            <p className="text-sm text-zinc-400 text-center py-3">No ganaste insignias aun.</p>
-          ) : (
-            <div className="flex flex-wrap gap-2">
-              {progress.badges.map(b => (
-                <span key={b.missionId} title={b.description} className="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-accent/15 border border-accent/30 text-sm text-accent font-semibold whitespace-nowrap">★ {b.name}</span>
-              ))}
+              <p className="text-sm font-bold text-zinc-300 uppercase tracking-wider mb-2">Insignias ganadas</p>
+              <div className="flex flex-wrap gap-2">
+                {progress.badges.map(b => (
+                  <span key={b.missionId} title={b.description} className="inline-flex items-center gap-1 px-3 py-2 rounded-full bg-accent/15 border border-accent/30 text-sm text-accent font-semibold whitespace-nowrap">{'★'} {b.name}</span>
+                ))}
               </div>
             </div>
           )}
-        </div>
 
         {/* Actions */}
         <div className="px-7 py-5 border-t border-border shrink-0 flex flex-col sm:flex-row gap-3">
