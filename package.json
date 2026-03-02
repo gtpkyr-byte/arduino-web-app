@@ -16,10 +16,9 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss": "latest",
+    "tailwindcss": "^4.0.0",
     "@tailwindcss/postcss": "^4.0.0",
-    "autoprefixer": "^10.4.0",
-    "tailwindcss-animate": "latest"
+    "autoprefixer": "^10.4.0"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
