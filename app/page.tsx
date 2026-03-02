@@ -1918,7 +1918,7 @@ function QuizPanel({ questions, savedAnswers, onAnswer, onComplete }: {
               className={cn('w-full text-left rounded-xl border px-5 py-4 text-base flex items-center gap-4 transition-all',
                 alreadyRight && isCor ? 'border-green-500 bg-green-500/10 cursor-default' : '',
                 alreadyRight && !isCor ? 'border-zinc-700 bg-zinc-800/40 opacity-40 cursor-default' : '',
-                !alreadyRight ? 'border-zinc-600 bg-zinc-800 hover:border-primary/60 hover:bg-primary/8 cursor-pointer active:scale-99' : '',
+                !alreadyRight ? 'border-zinc-600 bg-zinc-800 hover:border-primary/60 hover:bg-primary/10 cursor-pointer active:scale-95' : '',
               )}>
               <span className={cn('shrink-0 w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-bold',
                 alreadyRight && isCor ? 'border-green-500 text-green-400' : 'border-zinc-600 text-zinc-300')}>
@@ -1991,7 +1991,7 @@ function CelebrationOverlay({ visible, title, badge, msg, pts, onContinue }: {
   if (step === 'observe') {
     return (
       <div className="fixed inset-0 z-50 flex items-end justify-center pb-10 pointer-events-none">
-        <div className="pointer-events-auto w-full max-w-lg mx-4 rounded-2xl border border-green-500/50 bg-zinc-900/95 backdrop-blur-sm shadow-2xl overflow-hidden animate-in slide-in-from-bottom-4 duration-400">
+          <div className="pointer-events-auto w-full max-w-lg mx-4 rounded-2xl border border-green-500/50 bg-zinc-900/95 backdrop-blur-sm shadow-2xl overflow-hidden animate-slide-in-from-bottom-4">
           <div className="h-1 bg-gradient-to-r from-green-500 via-primary to-green-500" />
           <div className="px-6 py-5 flex items-center gap-5">
             <div className="w-12 h-12 rounded-full bg-green-500/20 border-2 border-green-500/50 flex items-center justify-center shrink-0">
@@ -2014,7 +2014,7 @@ function CelebrationOverlay({ visible, title, badge, msg, pts, onContinue }: {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/90 backdrop-blur-sm" role="dialog" aria-modal="true">
-      <div className="relative w-full max-w-md mx-4 rounded-2xl border border-primary/40 bg-card shadow-2xl animate-in zoom-in-90 duration-300 overflow-hidden">
+        <div className="relative w-full max-w-md mx-4 rounded-2xl border border-primary/40 bg-card shadow-2xl animate-zoom-in-90 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary" />
         <div className="p-8 text-center space-y-5">
           <div className="mx-auto w-20 h-20 rounded-full bg-accent/15 border-2 border-accent/40 flex items-center justify-center text-4xl">★</div>
@@ -2230,7 +2230,7 @@ function TeacherPanel({ onClose, onShowResults }: { onClose: () => void; onShowR
   const pct = Math.round((done / MISSIONS.length) * 100)
   return (
     <div className="fixed inset-0 z-40 flex items-center justify-center bg-background/80 backdrop-blur-sm">
-      <div className="w-full max-w-lg mx-4 rounded-2xl border border-border bg-card shadow-2xl animate-in zoom-in-95 duration-300 overflow-hidden max-h-[90vh] flex flex-col">
+        <div className="w-full max-w-lg mx-4 rounded-2xl border border-border bg-card shadow-2xl animate-zoom-in-90 overflow-hidden max-h-[90vh] flex flex-col">
         <div className="flex items-center gap-3 px-6 py-5 border-b border-border shrink-0">
           <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center text-primary font-bold text-lg">D</div>
           <div>
