@@ -2936,6 +2936,7 @@ function ResultsScreen({ onClose }: { onClose: () => void }) {
               </div>
             </div>
           )}
+        </div>{/* end flex-1 overflow-y-auto mission list */}
 
         {/* Actions */}
         <div className="px-7 py-5 border-t border-border shrink-0 flex flex-col sm:flex-row gap-3">
